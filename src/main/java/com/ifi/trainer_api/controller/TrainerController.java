@@ -23,7 +23,8 @@ public class TrainerController {
         return trainerService.getTrainer(name);
     }
 
-    /*@PostMapping("/{trainers]")
-    void update(@)*/
-
+    @PostMapping("/")
+    Trainer updateTrainer(@RequestBody Trainer trainer){
+        return trainerService.updateTrainer(trainer);
+    }
 }
