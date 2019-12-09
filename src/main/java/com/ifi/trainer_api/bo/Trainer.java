@@ -1,9 +1,6 @@
 package com.ifi.trainer_api.bo;
 
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -12,7 +9,7 @@ public class Trainer {
     @Id
     private String name;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<Pokemon> team;
 
     public Trainer() {
