@@ -12,6 +12,9 @@ public class Trainer {
     @ElementCollection(fetch = FetchType.EAGER)
     private List<Pokemon> team;
 
+    @Column
+    private String password;
+
     public Trainer() {
     }
 
@@ -33,5 +36,13 @@ public class Trainer {
 
     public void setTeam(List<Pokemon> team) {
         this.team = team;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
